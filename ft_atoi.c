@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/24 13:38:37 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/01 19:23:11 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/02/06 15:48:15 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int		ft_atoi(const char *str)
 	char	i;
 	int		beer;
 
+	i = 1;
 	beer = 0;
 	while ((((*str >= 9) && (*str <= 13)) || (*str == 32)) && (*str))
 		str++;

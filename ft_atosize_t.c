@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atosize_t.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 14:22:59 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/02 14:56:58 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/18 19:52:34 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/01/18 19:52:41 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t		ft_atosize_t(char *s)
 {
-	char	*beer;
-	int		beer2;
+	char	i;
+	size_t	beer;
 
-	beer2 = (int)ft_strlen(s);
-	while (beer2-- >= 0)
+	beer = 0;
+	i = 0;
+	while (((*s >= '\t' && *s <= '\r') || *s == ' ') && *s)
+		++s;
+	(*s == '-') ? i = 1 : 0;
+	(*s == '-' || *s == '+') ? ++s : 0;
+	while ((*s >= '0' && *s <= '9') && *s)
 	{
-		if (*s == c)
-		{
-			beer = (char*)s;
-			return (beer);
-		}
-		s++;
+		beer = (beer * 10) + (*s - 48);
+		++s;
 	}
-	return (NULL);
+	if (i == 1)
+		return (beer = -beer);
+	else
+		return (beer);
 }

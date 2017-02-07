@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnfjoin.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 14:22:59 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/02 14:56:58 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/15 15:43:01 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/01/15 15:54:37 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnfjoin(char *s1, char *s2, size_t n)
 {
-	char	*beer;
-	int		beer2;
-
-	beer2 = (int)ft_strlen(s);
-	while (beer2-- >= 0)
-	{
-		if (*s == c)
-		{
-			beer = (char*)s;
-			return (beer);
-		}
-		s++;
-	}
-	return (NULL);
+	s1 = ft_realloc(s1, ft_strlen(s1) + n);
+	s1 = ft_strncat(s1, s2, n);
+	return (s1);
 }

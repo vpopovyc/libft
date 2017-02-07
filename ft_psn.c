@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_psn.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 14:22:59 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/02 14:56:58 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/29 19:04:23 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/01/29 19:04:36 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_psn(char *s, unsigned int n)
 {
-	char	*beer;
-	int		beer2;
-
-	beer2 = (int)ft_strlen(s);
-	while (beer2-- >= 0)
-	{
-		if (*s == c)
-		{
-			beer = (char*)s;
-			return (beer);
-		}
-		s++;
-	}
-	return (NULL);
+	(s && *s) ? write(1, s, n) : 0;
 }

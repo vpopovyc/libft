@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isprintf_spec.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 14:22:59 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/02 14:56:58 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/21 18:20:04 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/01/25 21:18:18 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ft_isprintf_spec(int c)
 {
-	char	*beer;
-	int		beer2;
-
-	beer2 = (int)ft_strlen(s);
-	while (beer2-- >= 0)
-	{
-		if (*s == c)
-		{
-			beer = (char*)s;
-			return (beer);
-		}
-		s++;
-	}
-	return (NULL);
+	if (ft_isdigit(c))
+		return (1);
+	else if (c == '+' || c == ' ' || c == '-' || c == '.' || c == '#')
+		return (1);
+	else if (c == 'j' || c == 'l' || c == 'h' || c == 'z' || c == '*')
+		return (1);
+	return (0);
 }

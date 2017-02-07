@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 16:48:30 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/03 19:36:03 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/02/06 15:14:19 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <stdio.h>
+# include <limits.h>
+# include <locale.h>
+# include <wchar.h>
+# include <wctype.h>
 
 typedef struct		s_list
 {
@@ -83,5 +89,24 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 long				ft_do_op(char *n1, char *n2, char c);
 void				ft_intzero(int ar[], int f, size_t n);
-char				*ft_realloc(char *arr_in, int len);
+char				*ft_realloc(char *arr_in, size_t len);
+char				*ft_strnfjoin(char *s1, char *s2, size_t n);
+size_t				ft_atosize_t(char *s);
+int					ft_isprintf_spec(int c);
+int					ft_isprintf_up_spec(int c);
+char				*ft_sstoab(ssize_t value, ssize_t base);
+char				*ft_stoab(size_t value, size_t base);
+int					ft_iscl_group1(char c);
+int					ft_iscl_group2(char c);
+int					ft_iscl_group3(char c);
+void				ft_capitalize(char *s);
+void				ft_loweralize(char *s);
+void				ft_psn(char *s, unsigned int n);
+void				ft_pssn(char s, unsigned int n);
+size_t				ft_wstrlen(wchar_t *s);
+char				ft_wstrblen(wchar_t c);
+char				*ft_uct8(wchar_t c, unsigned char *data, char n);
+void				ft_pspp(char **s);
+size_t				ft_wstrmem(wchar_t *s);
+void				ft_ppdel(char ***sv);
 #endif

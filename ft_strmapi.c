@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 17:33:00 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/17 17:44:39 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/02/06 15:07:19 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*beer;
-	size_t	i;
+	char			*beer;
+	unsigned int	i;
 
 	i = -1;
 	beer = NULL;

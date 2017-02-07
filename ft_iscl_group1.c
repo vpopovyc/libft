@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_iscl_group1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 14:22:59 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/02 14:56:58 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/24 19:57:17 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/02/06 15:13:06 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ft_iscl_group1(char c)
 {
-	char	*beer;
-	int		beer2;
-
-	beer2 = (int)ft_strlen(s);
-	while (beer2-- >= 0)
-	{
-		if (*s == c)
-		{
-			beer = (char*)s;
-			return (beer);
-		}
-		s++;
-	}
-	return (NULL);
+	if (c == 'd' || c == 'i')
+		return (1);
+	return (0);
 }

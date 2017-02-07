@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t	beer;
+	unsigned int	beer;
 
 	beer = 0;
 	if (s && f)

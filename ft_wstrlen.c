@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_wstrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 14:22:59 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/02 14:56:58 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/28 17:37:32 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/02/06 15:12:05 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t		ft_wstrlen(wchar_t *s)
 {
-	char	*beer;
-	int		beer2;
+	size_t len;
 
-	beer2 = (int)ft_strlen(s);
-	while (beer2-- >= 0)
+	len = 0;
+	while (*s != L'\0')
 	{
-		if (*s == c)
-		{
-			beer = (char*)s;
-			return (beer);
-		}
-		s++;
+		++len;
+		++s;
 	}
-	return (NULL);
+	return (len);
 }

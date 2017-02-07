@@ -12,11 +12,11 @@
 
 #include "includes/libft.h"
 
-char	*ft_realloc(char *arr_in, int len)
+char	*ft_realloc(char *arr_in, size_t len)
 {
 	char	*arr_new;
 
-	arr_new = (char*)malloc(sizeof(char) * len);
+	arr_new = ft_strnew(len);
 	arr_new = ft_strcpy(arr_new, arr_in);
 	free(arr_in);
 	return (arr_new);

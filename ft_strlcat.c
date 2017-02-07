@@ -15,8 +15,8 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	char	*beer;
-	int		beer2;
-	int		beer3;
+	size_t	beer2;
+	size_t	beer3;
 
 	beer = dst;
 	beer2 = ft_strlen(beer);

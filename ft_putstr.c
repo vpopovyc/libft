@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 21:44:10 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/11/26 21:51:16 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/01/29 19:06:01 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_putstr(char const *s)
 	int		i;
 
 	i = -1;
-	if (!(s))
-		return ;
-	while (s[++i])
+	while (s[++i] && s)
+	{
 		ft_putchar(s[i]);
+	}
 }

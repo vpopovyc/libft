@@ -21,7 +21,7 @@ char	*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	st = 0;
-	ed = ft_strlen(s) - 1;
+	ed = (int)ft_strlen(s) - 1;
 	while (s[st] && (s[st] == ' ' || s[st] == '\n' || s[st] == '\t'))
 		st++;
 	if (st == (int)ft_strlen(s))

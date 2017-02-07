@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_stoab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 14:22:59 by vpopovyc          #+#    #+#             */
-/*   Updated: 2016/12/02 14:56:58 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/23 19:37:00 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/01/23 20:05:22 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *s, int c)
+static int		ft_len(size_t v, size_t b)
 {
-	char	*beer;
-	int		beer2;
+	int		ln;
 
-	beer2 = (int)ft_strlen(s);
-	while (beer2-- >= 0)
+	ln = (v == 0) ? 1 : 0;
+	while (v)
 	{
-		if (*s == c)
-		{
-			beer = (char*)s;
-			return (beer);
-		}
-		s++;
+		v /= b;
+		++ln;
 	}
-	return (NULL);
+	return (ln);
+}
+
+char			*ft_stoab(size_t v, size_t b)
+{
+	int			ln;
+	char		*st;
+
+	if (b < 2 || b > 16)
+		return (NULL);
+	ln = ft_len(v, b);
+	st = ft_strnew(ln);
+	while (--ln >= 0)
+	{
+		st[ln] = ((v % b) > 9) ? ((v % b) - 10 + 'A') : ((v % b) + '0');
+		v /= b;
+	}
+	return (st);
 }
