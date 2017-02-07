@@ -6,7 +6,7 @@
 #    By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/24 15:22:42 by vpopovyc          #+#    #+#              #
-#    Updated: 2017/02/06 15:21:20 by vpopovyc         ###   ########.fr        #
+#    Updated: 2017/02/07 20:31:28 by vpopovyc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprintf_spec.c ft_isalpha.c \
 		ft_iscl_group1.c ft_iscl_group2.c ft_loweralize.c ft_capitalize.c \
 		ft_wstrlen.c ft_iscl_group3.c ft_wstrblen.c ft_uct8.c ft_pspp.c \
 		ft_wstrmem.c ft_ppdel.c format.c ft_s_printf.c ft_group_onetwo.c \
-		ft_bit_party.c ft_making_move.c ft_group_united.c
+		ft_bit_party.c ft_making_move.c ft_group_united.c get_next_line.c
+
+INC = includes/libft.h
 
 OBJ = $(SRC:.c=.o) 
 
@@ -43,7 +45,7 @@ $(NAME): $(OBJ)
 	ranlib $(NAME)
 
 %.o: %.c
-	gcc -I includes/libft.h $(CFLAGS) -o $@ $<
+	gcc -I $(INC) $(CFLAGS) -o $@ $<
 
 clean:
 	rm -f $(OBJ)

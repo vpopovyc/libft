@@ -21,6 +21,7 @@
 # include <locale.h>
 # include <wchar.h>
 # include <wctype.h>
+# define BUFF_SIZE 1
 
 typedef struct		s_list
 {
