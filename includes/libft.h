@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 16:48:30 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/02/06 15:14:19 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/02/09 15:12:08 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <locale.h>
 # include <wchar.h>
 # include <wctype.h>
+# include <fcntl.h>
 # define BUFF_SIZE 1
 
 typedef struct		s_list
@@ -110,4 +111,5 @@ char				*ft_uct8(wchar_t c, unsigned char *data, char n);
 void				ft_pspp(char **s);
 size_t				ft_wstrmem(wchar_t *s);
 void				ft_ppdel(char ***sv);
+char				*ft_strndup(char *sv, size_t n);
 #endif
