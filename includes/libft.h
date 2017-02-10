@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 16:48:30 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/02/09 15:12:08 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/02/10 13:20:56 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,4 +112,7 @@ void				ft_pspp(char **s);
 size_t				ft_wstrmem(wchar_t *s);
 void				ft_ppdel(char ***sv);
 char				*ft_strndup(char *sv, size_t n);
+ssize_t				ft_power(ssize_t x, ssize_t n);
+void				ft_charstc(char s[], int n, const char *sv);
+int					ft_atoi_base(char *sv, int bs);
 #endif
