@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_nbr.c                                       :+:      :+:    :+:   */
+/*   ft_get_hexnbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,9 +12,9 @@
 
 #include "includes/libft.h"
 
-int		ft_get_nbr(const char *str)
+int	ft_get_hexnbr(const char *str)
 {
-
+		
 
 
 

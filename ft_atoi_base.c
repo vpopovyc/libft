@@ -40,13 +40,13 @@ int				ft_atoi_base(char *sv, int bs)
 	n = ft_strlen(sv);
 	while (n)
 	{
-		if (ft_strchr(p, *sv))
-		{
-			if (ft_isdigit(*sv))
-				rs = (*sv - '0') + (rs * bs);
-			else 
-				rs = (*sv - '7') + (rs * bs);
-		}
+		bs != 10 ? f = (char)ft_strchr(p, ft_toupper(*sv)) : 0;
+		if (ft_isdigit(*sv) && f)
+			rs = (*sv - '0') + (rs * bs);
+		else if (f)
+			rs = (ft_toupper(*sv) - '7') + (rs * bs);
+		else
+			break ;
 		++sv;
 		--n;
 	}

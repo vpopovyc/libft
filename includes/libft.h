@@ -22,6 +22,8 @@
 # include <wchar.h>
 # include <wctype.h>
 # include <fcntl.h>
+# include "get_next_line.h"
+# include "ft_printf.h"
 # define BUFF_SIZE 1
 
 typedef struct		s_list
@@ -115,4 +117,6 @@ char				*ft_strndup(char *sv, size_t n);
 ssize_t				ft_power(ssize_t x, ssize_t n);
 void				ft_charstc(char s[], int n, const char *sv);
 int					ft_atoi_base(char *sv, int bs);
+int				ft_ishex(char c);
+size_t				ft_chexlen(char *sv);
 #endif

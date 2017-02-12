@@ -31,7 +31,8 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprintf_spec.c ft_isalpha.c \
 		ft_wstrlen.c ft_iscl_group3.c ft_wstrblen.c ft_uct8.c ft_pspp.c \
 		ft_wstrmem.c ft_ppdel.c format.c ft_s_printf.c ft_group_onetwo.c \
 		ft_bit_party.c ft_making_move.c ft_group_united.c get_next_line.c \
-		ft_strndup.c ft_power.c ft_charstc.c ft_atoi_base.c
+		ft_strndup.c ft_power.c ft_charstc.c ft_atoi_base.c ft_ishex.c \
+		ft_chexlen.c
 
 INC = includes/libft.h
 
