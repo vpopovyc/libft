@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 16:48:30 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/02/10 13:20:56 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/02/27 14:15:24 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@
 # include <wchar.h>
 # include <wctype.h>
 # include <fcntl.h>
+# include <math.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
-# define BUFF_SIZE 1
+# define BUFF_SIZE 65000
 
 typedef struct		s_list
 {
