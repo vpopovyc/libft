@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chexlen.c                                       :+:      :+:    :+:   */
+/*   ft_pspp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/09 14:21:51 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/03/09 14:21:52 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/29 19:02:17 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/01/29 19:08:34 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-size_t	ft_chexlen(char *sv)
+void	pspp(char **s, int fd)
 {
-	size_t len;
-
-	len = 0;
-	while (ft_ishex(*sv++))
-		++len;
-	return (len);
+	while (*s && s)
+		ft_putstr_fd(*(s++), fd);
 }

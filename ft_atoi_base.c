@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 10:52:06 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/02/10 13:20:23 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/03/09 14:22:15 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ int				ft_atoi_base(char *sv, int bs)
 		++sv;
 		--n;
 	}
-	return (f == 1 ? -rs: rs);
+	return (f == 1 ? -rs : rs);
 }

@@ -32,7 +32,9 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprintf_spec.c ft_isalpha.c \
 		ft_wstrmem.c ft_ppdel.c format.c ft_s_printf.c ft_group_onetwo.c \
 		ft_bit_party.c ft_making_move.c ft_group_united.c get_next_line.c \
 		ft_strndup.c ft_power.c ft_charstc.c ft_atoi_base.c ft_ishex.c \
-		ft_chexlen.c ft_issign.c
+		ft_chexlen.c ft_issign.c f_format.c ft_s_fprintf.c ft_f_group_onetwo.c \
+		ft_f_bit_party.c ft_f_making_move.c ft_f_group_united.c ft_pspp_fd.c \
+		ft_psn_fd.c ft_pssn_fd.c
 
 INC = includes/libft.h
 
@@ -40,19 +42,23 @@ OBJ = $(SRC:.c=.o)
 
 CFLAGS = -c -Wall -Wextra -Werror
 
-all: $(NAME)
+all:  $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@echo "\x1b[32mObjects created\x1b[0m"
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo  "\x1b[32mLibft   compiled\x1b[0m"
 
 %.o: %.c
-	gcc -I $(INC) $(CFLAGS) -o $@ $<
+	@gcc -I $(INC) $(CFLAGS) -o $@ $<
 
 clean:
-	rm -f $(OBJ)
+	@echo "\033[01;31mObjects deleted\x1b[0m"
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@echo "\033[01;31mLibtf   deleted\x1b[0m"
+	@rm -f $(NAME)
 
 re: fclean all

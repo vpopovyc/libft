@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_hexnbr.c                                    :+:      :+:    :+:   */
+/*   ft_psn.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/10 13:24:30 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/02/10 13:39:42 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/01/29 19:04:23 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/01/29 19:04:36 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int	ft_get_hexnbr(const char *str)
+void	psn(char *s, unsigned int n, int fd)
 {
-		
-
-
-
-
-
+	(s && *s) ? write(fd, s, n) : 0;
 }

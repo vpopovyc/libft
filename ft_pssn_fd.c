@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chexlen.c                                       :+:      :+:    :+:   */
+/*   ft_pssn.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/09 14:21:51 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/03/09 14:21:52 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/02/06 15:07:52 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/02/06 15:08:25 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-size_t	ft_chexlen(char *sv)
+void	pssn(char s, unsigned int n, int fd)
 {
-	size_t len;
+	unsigned int	nb;
 
-	len = 0;
-	while (ft_ishex(*sv++))
-		++len;
-	return (len);
+	nb = n + 1;
+	while (--nb && s)
+		write(fd, &s, 1);
 }
