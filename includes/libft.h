@@ -26,6 +26,9 @@
 # include "get_next_line.h"
 # include "ft_printf.h"
 # include "ft_fprintf.h"
+# include <mlx.h>
+# define M_PI_180 0.01745329251994
+# define BS 8
 # define BUFF_SIZE 65000
 
 typedef struct		s_list
