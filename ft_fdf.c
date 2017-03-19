@@ -12,17 +12,18 @@
 
 #include "includes/ft_fdf.h"
 
-void	ft_fdf(char *av)
+void	ft_fdf(char *av, char player)
 {
 	t_root	root;
 
 	ft_get_root(0xffffff, 0xffffff, &root);
+    root.player = player;
 	if (ft_parse(open(av, O_RDONLY), &root))
 	{
 		if (((root.status ^ 0x2) ^ 0x80) & 0x40)
 			exit(ft_printf("Invalid matrix\n"));
-		if ((((root.status ^ 0x2) ^ 0x40) & 0x80) || !root.x_max)
-			exit(ft_printf("Empty file\n"));
+        if ((((root.status ^ 0x2) ^ 0x40) & 0x80) || !root.x_max)
+            exit(ft_printf("Empty file\n"));
 		if (((root.status ^ 0x40) ^ 0x80) & 0x2)
 			ft_diagonal(&root);
 	}

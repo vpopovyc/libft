@@ -6,7 +6,7 @@
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 16:48:30 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/03/09 14:24:59 by vpopovyc         ###   ########.fr       */
+/*   Updated: 2017/03/19 16:52:33 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@
 # include "get_next_line.h"
 # include "ft_printf.h"
 # include "ft_fprintf.h"
-# include <mlx.h>
+# include "mlx.h"
+# include "ft_fdf.h"
 # define M_PI_180 0.01745329251994
 # define BS 8
 # define BUFF_SIZE 65000

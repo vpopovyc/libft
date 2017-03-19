@@ -61,7 +61,7 @@ void	ft_keycode_moves(int keycode, t_root *root)
 void	ft_multiply(t_root *root, int keycode)
 {
 	if (keycode == 24)
-		root->mult = root->mult + 1 > 500 ? root->mult : root->mult + 1;
+		root->mult = root->mult + 1 > 100 ? root->mult : root->mult + 1;
 	else if (keycode == 27)
 		root->mult = root->mult - 1 < 0 ? 1 : root->mult - 1;
 	mlx_destroy_image(root->init, root->img);

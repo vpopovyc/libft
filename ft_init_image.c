@@ -62,6 +62,8 @@ int		ft_key_hook(int kc, t_root *root)
 		ft_keycode_angle(kc, root);
 	else if (kc == 4)
 		ft_init_help(root);
+    else if ((kc == 18 || kc == 19) && (root->name || root->status))
+        ft_redraw(kc, root);
 	return (0);
 }
 
@@ -70,11 +72,14 @@ int		ft_init_image(t_root *root)
 	root->init = mlx_init();
 	if (root->init == NULL)
 		exit(ft_printf("Couldn't establish connection\n"));
-	root->win = mlx_new_window(root->init, root->w_w, root->w_h, "fil de fer");
+	root->win = mlx_new_window(root->init, root->w_w, root->w_h, "filler");
 	if (root->win == NULL)
 		exit(ft_printf("Couldn't create window\n"));
 	root->status = 0;
 	mlx_hook(root->win, 2, 5, ft_key_hook, root);
-	mlx_loop(root->init);
+    mlx_string_put(root->init, root->win, 200, 200, 0x909090, "press 'i' to vis");
+    mlx_string_put(root->init, root->win, 200, 220, 0x909090, "press 'space' to escape");
+    mlx_string_put(root->init, root->win, 200, 240, 0x909090, "press 'h' for help");
+    mlx_loop(root->init);
 	return (0);
 }

@@ -43,17 +43,18 @@ void	ft_get_root(int def_color, int err_color, t_root *new)
 	new->head = NULL;
 	new->x_max = 0;
 	new->status = 0;
-	new->w_h = 1000;
-	new->w_w = 1500;
-	new->mult = 1;
+	new->w_h = 500;
+	new->w_w = 750;
+	new->mult = 20;
 	new->move_d = 0;
-	new->move_u = 0;
+	new->move_u = 250;
 	new->move_l = 0;
-	new->move_r = 0;
+	new->move_r = 400;
 	new->x_an = 0;
-	new->y_an = 00;
+	new->y_an = 0;
 	new->z_an = 0;
 	new->display_diag = 0;
+    new->name = 0;
 }
 
 void	ft_get_ld(t_ld *ld, t_fdf *p_start, t_fdf *p_end, t_root *root)

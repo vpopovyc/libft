@@ -51,6 +51,8 @@ typedef	struct		s_root
 	int				y_an;
 	int				z_an;
 	char			display_diag;
+    int             name;
+    char            player;
 	struct s_fdf	*head;
 }					t_root;
 
@@ -76,7 +78,7 @@ typedef	struct		s_ld
 	char	*t_i_data;
 }					t_ld;
 
-void				ft_fdf(char *av);
+void				ft_fdf(char *av, char player);
 void				ft_init_help(t_root *root);
 void				ft_keycode_angle(int keycode, t_root *root);
 void				ft_keycode_moves(int keycode, t_root *root);
@@ -111,8 +113,9 @@ void				ft_get_root(int def_color, int err_color, t_root *new);
 void				ft_get_ld(t_ld *ld, t_fdf *p_start,
 							t_fdf *p_end, t_root *root);
 void				ft_diagonal(t_root *root);
-void				ft_color(t_root *root, char **line, t_fdf **node);
 t_fdf				*ft_loop(char *line, int n, t_root *root);
-void				ft_spc(int *x, char *f, t_fdf **head, t_fdf **node);
+void				ft_spc(int *x, t_fdf **head, t_fdf **node);
 int					ft_parse(int fd, t_root *root);
+void                ft_redraw(int kc, t_root *root);
+char                ft_check_end(char *line);
 #endif
