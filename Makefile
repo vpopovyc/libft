@@ -6,7 +6,7 @@
 #    By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/24 15:22:42 by vpopovyc          #+#    #+#              #
-#    Updated: 2017/02/10 13:23:38 by vpopovyc         ###   ########.fr        #
+#    Updated: 2017/03/23 18:42:30 by vpopovyc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRC = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprintf_spec.c ft_isalpha.c \
 		ft_f_bit_party.c ft_f_making_move.c ft_f_group_united.c ft_pspp_fd.c \
 		ft_psn_fd.c ft_pssn_fd.c ft_parse.c ft_s_fdf.c ft_gradient.c \
 		ft_init_image.c ft_draw_aa_line.c ft_drawpixel.c ft_keycodes.c \
-		ft_modify_xyz.c ft_fdf.c
+		ft_modify_xyz.c ft_fdf.c ft_strclen.c
 
 INC = includes/libft.h
 
